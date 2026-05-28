@@ -1,7 +1,9 @@
 # -_aplicacion_java_intelliJ_idea_oracle-19C_- :.
 Aplicacion Java + IntelliJ IDEA + Oracle 19c:
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b13263d9-0fb4-41e7-b0ce-de94e765208b" />  
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b13263d9-0fb4-41e7-b0ce-de94e765208b" />    
+
+<img width="2559" height="1079" alt="image" src="https://github.com/user-attachments/assets/a0882335-4662-4f8a-af14-d543e44d66e9" />    
 
 ```
 Condicionales Anidados para Estado de Producto
