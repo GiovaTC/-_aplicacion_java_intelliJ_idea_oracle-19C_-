@@ -77,7 +77,7 @@ public class Main {
             System.out.println("ESTADO DEL PRODUCTO: " + estado);
 
             String sql =
-                    "INSERT INTO PRODUCTOS " +
+                    "INSERT INTO PRODUCTOS_E " +
                             "(NOMBRE, CATEGORIA, PRECIO, CANTIDAD, ESTADO) " +
                             "VALUES (?, ?, ?, ?, ?)";
 
