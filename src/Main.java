@@ -5,14 +5,18 @@ import java.util.Scanner;
 
 public class Main {
 
-    static final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
+    static final String URL =
+            "jdbc:oracle:thin:@//localhost:1521/orcl";
+
     static final String USER = "system";
     static final String PASSWORD = "Tapiero123";
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         try {
+
             Class.forName("oracle.jdbc.driver.OracleDriver");
 
             Connection conexion =
@@ -41,30 +45,41 @@ public class Main {
 
             String estado;
 
-            // CONDICIONALES ANIDADOS .
+            // CONDICIONALES ANIDADOS
 
             if (cantidad > 0) {
+
                 if (precio >= 100000) {
+
                     if (categoria.equalsIgnoreCase("TECNOLOGIA")) {
+
                         estado = "PRODUCTO PREMIUM";
+
                     } else {
+
                         estado = "PRODUCTO COSTOSO";
+
                     }
+
                 } else {
+
                     estado = "PRODUCTO ECONOMICO";
+
                 }
+
             } else {
+
                 estado = "AGOTADO";
+
             }
 
             System.out.println("---------------------------------");
             System.out.println("ESTADO DEL PRODUCTO: " + estado);
 
             String sql =
-                    "INSERT INTO PRODUCTOS_E " +
-                    "(NOMBRE, CATEGORIA, PRECIO, CANTIDAD, ESTADO) " +
-                    "(NOMBRE, CATEGORIA, PRECIO, CANTIDAD, ESTADO) " +
-                    "VALUES (?, ?, ?, ?, ?)";
+                    "INSERT INTO PRODUCTOS " +
+                            "(NOMBRE, CATEGORIA, PRECIO, CANTIDAD, ESTADO) " +
+                            "VALUES (?, ?, ?, ?, ?)";
 
             PreparedStatement ps =
                     conexion.prepareStatement(sql);
@@ -83,7 +98,9 @@ public class Main {
                 System.out.println("PRODUCTO REGISTRADO CORRECTAMENTE");
 
             } else {
-                System.out.println("ERROR AL REGISTRAR!");
+
+                System.out.println("ERROR AL REGISTRAR");
+
             }
 
             ps.close();
@@ -94,6 +111,9 @@ public class Main {
             System.out.println("---------------------------------");
             System.out.println("ERROR");
             System.out.println(e.getMessage());
+
         }
+
     }
-}   
+
+}
